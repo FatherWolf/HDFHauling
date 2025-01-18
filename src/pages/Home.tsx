@@ -3,12 +3,13 @@ import { Box, Typography } from '@mui/material';
 import ContactForm from '../components/Contactform';
 import Carousel from '../components/Carousel';
 
+// Import images from src folder
+import cloudstruck from '../images/cloudstruck.jpeg';
+import tankhaul from '../images/tankhaul.jpeg';
+import twotruck from '../images/twotruckhaul.jpeg';
+
 const Home = () => {
-  const images = [
-    '/images/cloudstruck.jpeg',
-    '/images/cloudstruck.jpeg',
-    '/images/cloudstruck.jpeg',
-  ];
+  const images = [cloudstruck, tankhaul, twotruck]; // Use imported image paths
 
   return (
     <Box>
