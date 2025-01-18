@@ -48,10 +48,10 @@ const Navbar = () => {
   return (
     <>
       {/* AppBar for Desktop and Mobile */}
-      <AppBar position="static">
+      <AppBar style={{ background: 'red', color: 'black' }} position="static">
         <Toolbar>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            My App
+            HDF Hauling
           </Typography>
           {/* Hamburger Menu Icon for Mobile */}
           <Box sx={{ display: { xs: 'block', sm: 'none' } }}>

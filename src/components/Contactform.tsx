@@ -77,6 +77,8 @@ const ContactForm = () => {
         maxWidth: '800px',
         margin: '0 auto',
         padding: 4,
+        color: 'black',
+        background: 'white',
       }}
     >
       <Typography variant="h4" gutterBottom>
