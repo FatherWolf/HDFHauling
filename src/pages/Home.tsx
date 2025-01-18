@@ -29,10 +29,6 @@ const Home = () => {
           background: 'black',
         }}
       >
-        <Typography variant="h4" gutterBottom color="white">
-          Welcome to HDF Hauling
-        </Typography>
-
         <Typography variant="body1" gutterBottom color="white">
           USA Born and Raised based out of NC
         </Typography>
