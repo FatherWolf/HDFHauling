@@ -13,6 +13,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
+import logohdf from '../images/logohdf.jpeg';
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -24,8 +25,7 @@ const Navbar = () => {
   const navItems = [
     { text: 'Home', path: '/' },
     { text: 'Privacy', path: '/privacy' },
-    { text: 'Contact', path: '/contact' },
-    { text: 'Dashboard', path: '/dashboard' },
+    { text: 'Services', path: '/services' },
   ];
 
   const drawer = (
@@ -35,7 +35,7 @@ const Navbar = () => {
           <ListItem
             button
             key={item.text}
-            component={Link as React.ElementType} // Explicitly cast Link
+            component={Link as React.ElementType}
             to={item.path}
           >
             <ListItemText primary={item.text} />
@@ -48,21 +48,20 @@ const Navbar = () => {
   return (
     <>
       {/* AppBar for Desktop and Mobile */}
-      <AppBar position="static">
+      <AppBar style={{ background: 'red', color: 'black' }} position="static">
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            My App
-          </Typography>
-          {/* Hamburger Menu Icon for Mobile */}
-          <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
-            <IconButton
-              color="inherit"
-              edge="start"
-              onClick={handleDrawerToggle}
-            >
-              <MenuIcon />
-            </IconButton>
+          {/* Logo and Title */}
+          <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
+            <img
+              src={logohdf}
+              alt="HDF Hauling Logo"
+              style={{ height: '40px', marginRight: '10px' }}
+            />
+            <Typography variant="h6" component="div" sx={{ color: 'white' }}>
+              HDF Hauling
+            </Typography>
           </Box>
+
           {/* Full Menu for Desktop */}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
@@ -75,6 +74,13 @@ const Navbar = () => {
                 {item.text}
               </Button>
             ))}
+          </Box>
+
+          {/* Hamburger Menu Icon for Mobile */}
+          <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+            <IconButton color="inherit" edge="end" onClick={handleDrawerToggle}>
+              <MenuIcon />
+            </IconButton>
           </Box>
         </Toolbar>
       </AppBar>

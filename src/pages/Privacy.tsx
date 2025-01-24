@@ -15,9 +15,9 @@ const Privacy = () => {
         Privacy Policy
       </Typography>
       <Typography variant="body1" gutterBottom>
-        At My App, your privacy is our priority. This Privacy Policy outlines
-        how we collect, use, and protect your information when you use our
-        website and services.
+        At HDF Hauling LLC, your privacy is our priority. This Privacy Policy
+        outlines how we collect, use, and protect your information when you use
+        our website and services.
       </Typography>
       <Typography variant="h5" component="h2" gutterBottom>
         Information We Collect
