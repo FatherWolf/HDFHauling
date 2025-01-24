@@ -30,7 +30,15 @@ const Home = () => {
         }}
       >
         <Typography variant="body1" gutterBottom color="white">
-          USA Born and Raised based out of NC
+          Proudly born and raised in the USA, with our roots firmly established
+          in North Carolina.
+          <br />
+          <br />
+          At HDF Hauling, our dispatching services reflect our unwavering
+          commitment to excellence. We go above and beyond to deliver top-tier
+          work, ensuring your trucking operations run smoothly, efficiently, and
+          profitably. With us, you're not just getting a service—you're gaining
+          a dedicated partner in your success.
         </Typography>
 
         <Box mt={4} width="100%" maxWidth="600px">

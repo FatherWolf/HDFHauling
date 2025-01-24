@@ -25,8 +25,7 @@ const Navbar = () => {
   const navItems = [
     { text: 'Home', path: '/' },
     { text: 'Privacy', path: '/privacy' },
-    { text: 'Contact', path: '/contact' },
-    { text: 'Dashboard', path: '/dashboard' },
+    { text: 'Services', path: '/services' },
   ];
 
   const drawer = (

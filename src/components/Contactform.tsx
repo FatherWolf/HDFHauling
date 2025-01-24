@@ -82,7 +82,7 @@ const ContactForm = () => {
       }}
     >
       <Typography variant="h4" gutterBottom>
-        Driver Info Form
+        Get more Information
       </Typography>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
