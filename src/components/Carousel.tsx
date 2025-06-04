@@ -20,7 +20,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
     <Box
       sx={{
         width: '100%',
-        height: { xs: '200px', sm: '300px', md: '400px' },
+        height: { xs: '300px', sm: '400px', md: '500px' },
         position: 'relative',
         overflow: 'hidden',
       }}

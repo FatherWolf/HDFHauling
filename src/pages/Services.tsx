@@ -9,13 +9,25 @@ import {
   Container,
 } from '@mui/material';
 
-import dispatchImage from '../images/dispatch.webp';
-import haulingImage from '../images/haulingtruck.webp';
-import startupImage from '../images/handshake.webp';
+import dispatchImage from '../images/businesscard.png';
+import haulingImage from '../images/newtruckstone.jpg';
+import startupImage from '../images/logohdf.jpg';
 
 const services = [
   {
-    title: 'Dispatching Services',
+    title: 'Getting Started in Trucking',
+    description:
+      'Dreaming of hitting the road as your own boss? HDF Hauling helps you navigate the journey to a successful trucking business. From permits to planning, we’re with you every step of the way.',
+    points: [
+      'Business Startup Assistance: Guidance on obtaining your CDL, forming your LLC, and acquiring necessary permits and insurance.',
+      'Fleet Consulting: Advice on purchasing your first truck and scaling your operations.',
+      'Expert Industry Knowledge: Insights into market trends, load opportunities, and best practices for success.',
+      'Ongoing Support: Stay ahead with tools, resources, and mentorship tailored for new trucking entrepreneurs.',
+    ],
+    image: startupImage,
+  },
+  {
+    title: 'Fleet Management Services',
     description:
       "Effortlessly keep your trucks moving and earning with HDF Hauling's expert dispatching services. We handle everything from load planning to negotiating the best rates, so you can focus on the road.",
     points: [
@@ -32,23 +44,11 @@ const services = [
       "Trust HDF Hauling for reliable, on-time delivery of freight across the country. Whether it's local or long-distance, we deliver excellence with every load.",
     points: [
       'On-Time Delivery: Your freight arrives on schedule, every time.',
-      'Wide Range of Freight: We haul dry van, flatbed, refrigerated, and specialty loads with care and precision.',
+      'Wide Range of Freight: We haul Hotshot Loads, flatbed with ramps, and specialty loads with care and precision.',
       'Modern Fleet: Our trucks are equipped with advanced tracking technology to ensure secure and efficient transit.',
       'Customer-First Approach: Exceptional communication and service for shippers and receivers alike.',
     ],
     image: haulingImage,
-  },
-  {
-    title: 'Getting Started in Trucking',
-    description:
-      'Dreaming of hitting the road as your own boss? HDF Hauling helps you navigate the journey to a successful trucking business. From permits to planning, we’re with you every step of the way.',
-    points: [
-      'Business Startup Assistance: Guidance on obtaining your CDL, forming your LLC, and acquiring necessary permits and insurance.',
-      'Fleet Consulting: Advice on purchasing your first truck and scaling your operations.',
-      'Expert Industry Knowledge: Insights into market trends, load opportunities, and best practices for success.',
-      'Ongoing Support: Stay ahead with tools, resources, and mentorship tailored for new trucking entrepreneurs.',
-    ],
-    image: startupImage,
   },
 ];
 

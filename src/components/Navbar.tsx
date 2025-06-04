@@ -13,7 +13,7 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
-import logohdf from '../images/logohdf.jpeg';
+import logohdf from '../images/logohdf.jpg';
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -24,8 +24,8 @@ const Navbar = () => {
 
   const navItems = [
     { text: 'Home', path: '/' },
-    { text: 'Privacy', path: '/privacy' },
     { text: 'Services', path: '/services' },
+    { text: 'Privacy', path: '/privacy' },
   ];
 
   const drawer = (

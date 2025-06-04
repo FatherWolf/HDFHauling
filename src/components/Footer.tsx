@@ -14,7 +14,17 @@ const Footer: React.FC = () => {
       }}
     >
       <Typography variant="body2" color="textSecondary">
-        Made in 2023
+        Property of HDF Hauling LLC. All rights reserved.
+        <br />
+        <a
+          href="https://www.hdfhauling.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          www.hdfhauling.com
+        </a>
+        <br />
+        Made in 2024 by CursedWardenLabs llc
       </Typography>
     </Box>
   );
