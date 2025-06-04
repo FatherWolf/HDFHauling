@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.c16f4202.js",
+    "static/media/haulingtruck.webp": "/static/media/haulingtruck.144396c93dfe8b146e86.webp",
+    "static/media/dispatch.webp": "/static/media/dispatch.a28c56afb7a65f4d8e14.webp",
+    "static/media/twotruckhaul.jpeg": "/static/media/twotruckhaul.603f3cdf74266027226c.jpeg",
+    "static/media/cloudstruck.jpeg": "/static/media/cloudstruck.616025f120aa0269ad4c.jpeg",
+    "static/media/handshake.webp": "/static/media/handshake.ddcffa30f2aa4d8d005f.webp",
+    "static/media/logohdf.jpeg": "/static/media/logohdf.9cbfa071ea11de1e8c87.jpeg",
+    "static/media/tankhaul.jpeg": "/static/media/tankhaul.e66acc7904e8229cd507.jpeg",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.c16f4202.js.map": "/static/js/main.c16f4202.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.c16f4202.js"
+  ]
+}

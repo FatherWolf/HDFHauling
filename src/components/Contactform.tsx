@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
+// src/components/ContactForm.tsx
+import React, { useState, useEffect } from 'react';
 import { Box, TextField, Button, Typography, Grid } from '@mui/material';
 import emailjs from '@emailjs/browser';
 
-const ContactForm = () => {
+const ContactForm: React.FC = () => {
+  // 1) Initialize EmailJS with your Public Key (User ID) once
+  useEffect(() => {
+    emailjs.init('8CGKi5KtVlMl75CCi');
+    // ← Your public key from EmailJS dashboard
+  }, []);
+
+  // 2) State holds all template variables as defined in your EmailJS template
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
+    email: '',
     phone: '',
     cityState: '',
     mcNumber: '',
@@ -17,37 +26,41 @@ const ContactForm = () => {
     trailerDimensions: '',
     maxLoad: '',
     additionalInfo: '',
-    email: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // 3) Handle input changes
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
   };
 
+  // 4) On form submission, send via emailjs.send(...)
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    console.log('Sending to EmailJS:', formData);
+
     emailjs
       .send(
-        'service_1icasl7', // Replace with your Service ID
-        'template_gmtd4sq', // Replace with your Template ID
-        formData,
-        '8CGKi5KtVlMl75CCi' // Replace with your Public Key
+        'service_mr5y8f7', // ← Your Service ID
+        'template_gmtd4sq', // ← Your Template ID
+        formData // ← formData keys must match template variables
+        // No need to pass public key here because we called init()
       )
       .then(
         (response) => {
-          console.log(
-            'Email sent successfully!',
-            response.status,
-            response.text
-          );
+          console.log('Email sent:', response.status, response.text);
           alert('Form submitted successfully!');
+          // Reset all fields
           setFormData({
             firstName: '',
             lastName: '',
+            email: '',
             phone: '',
             cityState: '',
             mcNumber: '',
@@ -59,7 +72,6 @@ const ContactForm = () => {
             trailerDimensions: '',
             maxLoad: '',
             additionalInfo: '',
-            email: '',
           });
           setIsSubmitting(false);
         },
@@ -75,18 +87,19 @@ const ContactForm = () => {
     <Box
       sx={{
         maxWidth: '800px',
-        margin: '0 auto',
-        padding: 4,
+        mx: 'auto',
+        p: 4,
+        bgcolor: 'white',
         color: 'black',
-        background: 'white',
       }}
     >
       <Typography variant="h4" gutterBottom>
-        Get more Information
+        Get More Information
       </Typography>
+
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
-          {/* First Name and Last Name */}
+          {/* First Name */}
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
@@ -97,6 +110,8 @@ const ContactForm = () => {
               required
             />
           </Grid>
+
+          {/* Last Name */}
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
@@ -107,29 +122,34 @@ const ContactForm = () => {
               required
             />
           </Grid>
+
+          {/* Email Address */}
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
               label="Email Address"
               name="email"
+              type="email"
               value={formData.email}
               onChange={handleChange}
               required
             />
           </Grid>
 
-          {/* Phone, City/State */}
+          {/* Phone */}
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
               label="Phone"
               name="phone"
-              type="number"
+              type="tel"
               value={formData.phone}
               onChange={handleChange}
               required
             />
           </Grid>
+
+          {/* City and State */}
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
@@ -140,29 +160,31 @@ const ContactForm = () => {
             />
           </Grid>
 
-          {/* MC Number and DOT Number */}
+          {/* MC Number */}
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
               label="MC Number"
               name="mcNumber"
-              type="number"
+              type="text"
               value={formData.mcNumber}
               onChange={handleChange}
             />
           </Grid>
+
+          {/* DOT Number */}
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
               label="DOT Number"
               name="dotNumber"
-              type="number"
+              type="text"
               value={formData.dotNumber}
               onChange={handleChange}
             />
           </Grid>
 
-          {/* Authority Time and Costs */}
+          {/* Authority Time */}
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
@@ -172,6 +194,8 @@ const ContactForm = () => {
               onChange={handleChange}
             />
           </Grid>
+
+          {/* Lowest Cost Per Mile */}
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
@@ -181,6 +205,8 @@ const ContactForm = () => {
               onChange={handleChange}
             />
           </Grid>
+
+          {/* Furthest Dead Head */}
           <Grid item xs={12}>
             <TextField
               fullWidth
@@ -202,7 +228,7 @@ const ContactForm = () => {
             />
           </Grid>
 
-          {/* Trailer Dimensions, Max Load */}
+          {/* Trailer Dimensions */}
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
@@ -212,6 +238,8 @@ const ContactForm = () => {
               onChange={handleChange}
             />
           </Grid>
+
+          {/* Max Load */}
           <Grid item xs={12} sm={6}>
             <TextField
               fullWidth
