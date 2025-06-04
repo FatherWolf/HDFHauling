@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.b0bd2b08.js",
+    "static/media/newtruck.png": "/static/media/newtruck.e2002f5d30738b1cd9ce.png",
+    "static/media/newtruckstone.jpg": "/static/media/newtruckstone.e58ccfd2de81c9322906.jpg",
+    "static/media/nclogo.jpg": "/static/media/nclogo.796016aa1912ab2603e5.jpg",
+    "static/media/businesscard.png": "/static/media/businesscard.6af0dc66afc321cb5393.png",
+    "static/media/twotruckhaul.jpeg": "/static/media/twotruckhaul.603f3cdf74266027226c.jpeg",
+    "static/media/cloudstruck.jpeg": "/static/media/cloudstruck.616025f120aa0269ad4c.jpeg",
+    "static/media/logohdf.jpg": "/static/media/logohdf.aea187adee75bd1493a9.jpg",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.b0bd2b08.js.map": "/static/js/main.b0bd2b08.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.b0bd2b08.js"
+  ]
+}

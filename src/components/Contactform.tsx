@@ -82,7 +82,7 @@ const ContactForm = () => {
       }}
     >
       <Typography variant="h4" gutterBottom>
-        Get more Information
+        Want to Lease on with us?
       </Typography>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
