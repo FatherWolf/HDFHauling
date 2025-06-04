@@ -94,7 +94,7 @@ const ContactForm: React.FC = () => {
       }}
     >
       <Typography variant="h4" gutterBottom>
-        Want to Lease on with us?
+        Get More Information
       </Typography>
 
       <form onSubmit={handleSubmit}>
